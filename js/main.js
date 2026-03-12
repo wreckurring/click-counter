@@ -7,6 +7,39 @@ const enoughSound = document.getElementById("enoughSound");
 const clickSound = document.getElementById("clickSound");
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 let count = 0;
 let zeroHitCount = 0; 
 let soundHitCount = 0; 
