@@ -9,14 +9,10 @@ let count = 0;
 let zeroHitCount = 0; 
 let soundHitCount = 0; 
 
-/* ================= COUNTER UPDATE ================= */
-
 function updateCount() {
     counter.textContent = count;
     createFloatingNumber(count);
 }
-
-/* ================= RESET ================= */
 
 function reset() {
     count = 0;
@@ -24,8 +20,6 @@ function reset() {
     soundHitCount = 0;
     updateCount();
 }
-
-/* ================= DECREASE ================= */
 
 function decrease() {
     if (count <= 0) {
@@ -55,8 +49,6 @@ function decrease() {
     updateCount();
 }
 
-/* ================= INCREASE ================= */
-
 function increase() {
     zeroHitCount = 0;
     soundHitCount = 0;
@@ -64,8 +56,6 @@ function increase() {
     count++;
     updateCount();
 }
-
-/* ================= FLOATING NUMBER ================= */
 
 function createFloatingNumber(value) {
     const floating = document.createElement("div");
@@ -81,8 +71,6 @@ function createFloatingNumber(value) {
     setTimeout(() => floating.remove(), 1400);
 }
 
-/* ================= SHAKE FEEDBACK ================= */
-
 function triggerLimitFeedback() {
     counterBox.classList.add("shake", "red-glow");
 
@@ -90,8 +78,6 @@ function triggerLimitFeedback() {
         counterBox.classList.remove("shake", "red-glow");
     }, 300);
 }
-
-/* ================= BIG ENOUGH TEXT ================= */
 
 function showEnoughText() {
     const text = document.createElement("div");
@@ -102,8 +88,6 @@ function showEnoughText() {
 
     setTimeout(() => text.remove(), 2000);
 }
-
-/* ================= PLAY SOUND ================= */
 
 function playEnoughSound() {
     if (!enoughSound) return;
@@ -120,8 +104,6 @@ function playEnoughSound() {
         }
     } catch (e) {}
 }
-
-/* ================= HOLD BEHAVIOR ================= */
 
 let holdInterval = null;
 let holdTimeout = null;
@@ -143,11 +125,7 @@ function stopHold() {
     holdInterval = null;
 }
 
-/* ================= EVENT LISTENERS ================= */
-
 resetBtn.addEventListener("click", reset);
-
-/* -------- INCREASE -------- */
 
 increaseBtn.addEventListener("mousedown", () => startHold(increase));
 increaseBtn.addEventListener("mouseup", stopHold);
@@ -156,8 +134,6 @@ increaseBtn.addEventListener("mouseleave", stopHold);
 increaseBtn.addEventListener("click", () => {
     if (!holdInterval) increase();
 });
-
-/* -------- DECREASE -------- */
 
 decreaseBtn.addEventListener("mousedown", () => startHold(decrease));
 decreaseBtn.addEventListener("mouseup", stopHold);
