@@ -14,8 +14,6 @@ function updateCount() {
     createFloatingNumber(count);
 }
 
-function init()
-
 function reset() {
     count = 0;
     zeroHitCount = 0;
