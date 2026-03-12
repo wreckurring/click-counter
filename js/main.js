@@ -142,17 +142,6 @@ function stopHold() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 resetBtn.addEventListener("click", reset);
 
 increaseBtn.addEventListener("mousedown", () => startHold(increase));
