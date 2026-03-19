@@ -5,6 +5,30 @@ const decreaseBtn = document.getElementById("decrease");
 const counterBox = document.getElementById("counterBox");
 const enoughSound = document.getElementById("enoughSound");
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 let count = 0;
 let zeroHitCount = 0; 
 let soundHitCount = 0; 
