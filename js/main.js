@@ -15,8 +15,11 @@ function updateCount() {
     createFloatingNumber(count);
 }
 
+
+
 function reset() {
     count = 0;
+    
     zeroHitCount = 0;
     soundHitCount = 0;
     updateCount();
